@@ -16,7 +16,7 @@ const About = () => {
                 </div>
                 <div className="about-right">
                     <div className="about-para">
-                        <p>Innovative and detail-oriented Full Stack Developer with 3+ years of experience in designing, developing, and deploying end-to-end
+                        <p>Innovative and detail-oriented Full Stack Developer with 4+ years of experience in designing, developing, and deploying end-to-end
                             web applications. Proficient in both front-end and back-end technologies. Skilled in building scalable, secure, and user-centric
                             applications while ensuring seamless integration between client-side and server-side components. Experienced in the full software
                             development life cycle (SDLC), from concept to deployment, with a strong focus on delivering high-quality solutions on time.
@@ -27,6 +27,7 @@ const About = () => {
                         <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "60%" }} /></div>
                         <div className="about-skill"><p>React JS</p><hr style={{ width: "50%" }} /></div>
                         <div className="about-skill"><p>Java Script</p><hr style={{ width: "60%" }} /></div>
+                        <div className="about-skill"><p>Python</p><hr style={{ width: "60%" }} /></div>
                         <div className="about-skill"><p>SQL</p><hr style={{ width: "70%" }} /></div>
                     </div>
                 </div>

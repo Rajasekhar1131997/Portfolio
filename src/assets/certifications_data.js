@@ -29,6 +29,12 @@ const Certifications_Data = [
         c_desc:"Certification for data professionals who help organizations by leveraging Tableau to make decisions by figuring out what the problem is, finding the right information to look at, and giving them useful insights they can act on. This certification measures a candidate's ability to use Tableau Prep Builder to connect to and transform data, explore and analyze data in Tableau Desktop, and publish and manage content on Tableau Server or Tableau Cloud.",
         c_link: "https://www.linkedin.com/learning/certificates/e852fcbc592a6e837cd5ad45216f1d8dd9956e8ac5ffe64af2ef9f12797d3435?trk=share_certificate"
     },
+    {
+        c_no:"06",
+        c_name:"Complete Guide to Power BI for Data Analysts by Microsoft Press",
+        c_desc:"Certification for data professionals who empower organizations by transforming raw data into actionable insights using Microsoft Power BI. This certification validates a candidate’s ability to identify business requirements, clean and model data using Power Query, build insightful reports and dashboards in Power BI Desktop, and deploy scalable solutions through the Power BI service. It demonstrates proficiency in creating interactive visualizations, performing advanced analytics, and enabling data-driven decision-making across teams.",
+        c_link: "https://www.linkedin.com/learning/certificates/0b42238c485576a97e98d66e8e06017d76a16000952db3950a26aecc6af7f306?trk=share_certificate"
+    },
 ]
  
 export default Certifications_Data;

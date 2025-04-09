@@ -47,6 +47,12 @@ const mywork_data = [
         w_desc:"This project involves analyzing global supermarket sales data to uncover key sales trends, regional performance insights, and product category contributions. Using Tableau, I developed an interactive dashboard that helps businesses understand sales patterns and make data-driven decisions.",
         w_link: "https://github.com/Rajasekhar1131997/Tableau_Projects/tree/main/Global_SuperMarket_Sales_Dashboard"
     },
+    {
+        w_no:"09",
+        w_name:"Sales Dashboard Using Power BI | Power BI Desktop",
+        w_desc:"​The Sales Dashboard Using Power BI project demonstrates the creation of an interactive dashboard to analyze sales data effectively. By utilizing Power BI's robust features, this project offers insights into key sales metrics, enabling data-driven decision-making.",
+        w_link: "https://github.com/Rajasekhar1131997/Sales_Dashboard_Using_PowerBI"
+    },
 ]
  
 export default mywork_data;
