@@ -45,7 +45,7 @@ const Hero = () => {
       <img src={profile_img} alt="Profile" />
       <h1>
         <span>I'm Rajasekhar Reddy Kolagotla,</span><br />
-        <span className='typewriter-text'>{text}</span> based in USA.
+        <span className='typewriter-text'>{text}</span>based in USA.
       </h1>
       <p>I am a full Stack Software developer from California, USA with 4+ years of experience.</p>
       <div className="hero-action">
