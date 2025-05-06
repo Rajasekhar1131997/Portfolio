@@ -22,7 +22,7 @@
 }
 .certifications-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
 }
 .certifications-format{
@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding: 60px;
+    padding: 10px;
     border-radius: 10px;
     border: 2px solid #ffffff;
     transition: 0.4s;
