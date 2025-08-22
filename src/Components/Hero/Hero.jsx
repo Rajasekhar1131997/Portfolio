@@ -56,8 +56,8 @@ const Hero = () => {
           className="hero-resume"
           onClick={() => {
             const link = document.createElement('a');
-            link.href = "https://raw.githubusercontent.com/Rajasekhar1131997/Portfolio/main/Rajasekhar_Reddy_FS_Resume.pdf";
-            link.download = "Rajasekhar_Reddy_FS_Resume.pdf";
+            link.href = "https://raw.githubusercontent.com/Rajasekhar1131997/Portfolio/main/Rajasekhar_Reddy_Resume.pdf";
+            link.download = "Rajasekhar_Reddy_Resume.pdf";
             link.click();
           }}
         >

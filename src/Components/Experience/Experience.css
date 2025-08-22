@@ -129,6 +129,12 @@
     font-style: italic;
   }
   
+  .timeline-content .job_type {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 5px;
+  }
+
   .timeline-content .date {
     font-size: 0.85rem;
     color: #999;

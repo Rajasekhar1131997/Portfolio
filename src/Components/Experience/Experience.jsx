@@ -9,13 +9,23 @@ const experienceData = [
     {
         title: "Full Stack Software Developer",
         company: "Skeyee Dynamics",
+        Job_type: "Full Time (Remote)",
         location: "Hyderabad, Telangana, India",
         date: "Sep. 2022 – Dec. 2024",
         icon: <FaBriefcase />,
     },
     {
+        title: "Data Analytics & Mining in CS",
+        company: "California State University, Sacramento",
+        Job_type: "Part Time",
+        location: "Sacramento, CA",
+        date: "Jan. 2024 – Dec. 2024",
+        icon: <FaBriefcase />,
+    },
+    {
         title: "Software Engineer Intern",
         company: "UL Solutions",
+        Job_type: "Internship",
         location: "Fremont, CA",
         date: "May 2024 – Aug 2024 | June 2023 – July 2023",
         icon: <FaBriefcase />,
@@ -23,13 +33,15 @@ const experienceData = [
     {
         title: "Master of Science in Computer Science",
         company: "California State University, Sacramento",
+        Job_type: "Graduate Degree",
         location: "Sacramento, CA",
         date: "May 2022 - Dec. 2024",
         icon: <FaGraduationCap />,
     },
     {
-        title: "I.T Analyst Intern",
+        title: "Java Full Stack Developer",
         company: "Tata Consultancy Services Pvt. Ltd. (TCS)",
+        Job_type: "Full Time (On-site)",
         location: "Kolkata, West Bengal, India",
         date: "Jan. 2019 – May 2022",
         icon: <FaBriefcase />,
@@ -37,6 +49,7 @@ const experienceData = [
     {
         title: "Bachelor of Engineering in Computer Science",
         company: "K L University",
+        Job_type: "Bachelors Degree",
         location: "Vijayawada, Andhra Pradesh, India",
         date: "Aug. 2014 - May 2018",
         icon: <FaGraduationCap />,
@@ -58,6 +71,7 @@ const Experience = () => {
                         <div className="timeline-content">
                             <h3>{item.title}</h3>
                             <h4>{item.company}</h4>
+                            <h3 className="job_type">{item.Job_type}</h3>
                             <span className="location">{item.location}</span>
                             {item.date && <p className="date">{item.date}</p>}
                         </div>

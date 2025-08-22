@@ -16,12 +16,16 @@ const About = () => {
                 </div>
                 <div className="about-right">
                     <div className="about-para">
-                        <p>Innovative and detail-oriented Full Stack Developer with 4+ years of experience in designing, developing, and deploying end-to-end
-                            web applications. Proficient in both front-end and back-end technologies. Skilled in building scalable, secure, and user-centric
-                            applications while ensuring seamless integration between client-side and server-side components. Experienced in the full software
-                            development life cycle (SDLC), from concept to deployment, with a strong focus on delivering high-quality solutions on time.
-                            Passionate about leveraging cutting-edge technologies to solve complex problems and enhance user experiences. Strong academic
-                            foundation in Computer Science, complemented by hands-on experience in industry-leading projects.</p>
+                        <p>I love building end-to-end solutions that seamlessly connect the front-end 
+                            and back-end, ensuring both functionality and great user experience. 
+                            From crafting sleek interfaces with React to designing optimized databases and 
+                            APIs, I thrive on solving complex problems with clean, efficient code. </p>
+                        <p>
+                            Beyond the code, I’m an innovator at heart — always curious about the latest 
+                            technologies and how they can make products faster, smarter, and more impactful. 
+                            My journey spans industry-leading projects, academic research, and real-world 
+                            challenges that shaped me into a developer who values quality, collaboration, 
+                            and continuous learning.</p>
                     </div>
                     <div className="about-skills">
                         <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "60%" }} /></div>

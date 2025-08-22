@@ -87,6 +87,82 @@
     background-image: linear-gradient(45deg, #3f0028 10%, #582300 100%);
     transition: 0.4s;
 }
+
+/* Description with clamp + fade */
+.mywork-desc {
+  color: #d4d4d4;
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 500px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.mywork-desc.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;           /* show ~4 lines when collapsed */
+  -webkit-box-orient: vertical;
+  max-height: calc(4 * 32px);
+}
+
+.mywork-desc.clamped::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(24,24,27,0), rgba(24,24,27,0.9));
+  pointer-events: none;
+}
+
+/* Actions row */
+.mywork-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+/* Read more button */
+.readmore-btn {
+  background: transparent;
+  border: 1px solid #b923e1;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.readmore-btn:hover {
+  background: rgba(185,35,225,0.15);
+  transform: translateY(-1px);
+  border-color: #df8908;
+}
+
+/* Optional: slightly subtler hover on card to match the other section */
+.mywork-format:hover {
+  transform: translateY(-4px) scale(1.02);
+  border: 2px solid #b923e1;
+  background-image: linear-gradient(45deg, #3f0028 10%, #582300 100%);
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 768px) {
+  .mywork-desc {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 100%;
+  }
+  .mywork-container {
+    grid-template-columns: 1fr;   /* single column on small screens */
+    gap: 20px;
+  }
+}
+
 @media(max-width: 768px) {
     .mywork {
         align-items: start;
