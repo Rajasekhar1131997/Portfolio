@@ -9,15 +9,15 @@ const experienceData = [
     {
         title: "Full Stack Software Developer",
         company: "Skeyee Dynamics",
-        Job_type: "Full Time (Remote)",
+        Job_type: "Freelancer",
         location: "Hyderabad, Telangana, India",
-        date: "Sep. 2022 – Dec. 2024",
+        date: "Sep. 2022 – Dec. 2023",
         icon: <FaBriefcase />,
     },
     {
         title: "Data Analytics & Mining in CS",
         company: "California State University, Sacramento",
-        Job_type: "Part Time",
+        Job_type: "Instructional Student Assistant",
         location: "Sacramento, CA",
         date: "Jan. 2024 – Dec. 2024",
         icon: <FaBriefcase />,

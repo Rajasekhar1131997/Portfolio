@@ -7,6 +7,7 @@ import MyWork from './Components/MyWork/MyWork'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import Experience from './Components/Experience/Experience'
+import Chatbot from './Chatbot'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Experience/>
       <Contact/>
       <Footer/>
+      <Chatbot/>
     </div>
   )
 }
