@@ -4,7 +4,7 @@ import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import path from "path";
 
 // Path to your resume
-const resumePath = path.resolve("./Resume.pdf");
+const resumePath = path.resolve("./Rajasekhar_Reddy_Kolagotla.pdf");
 
 // Extract text from PDF
 async function extractPdfText(filePath) {
