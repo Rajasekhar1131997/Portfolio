@@ -29,10 +29,10 @@ async function loadEmbedder() {
 }
 await loadEmbedder();
 
-// ✅ Conversation memory (per session)
+// ✅ Conversation memory
 let conversationHistory = [];
 
-// ✅ Chat endpoint
+// ✅ Chat endpoint (full reply only)
 app.post("/chat", async (req, res) => {
   const { message } = req.body;
 
@@ -41,9 +41,8 @@ app.post("/chat", async (req, res) => {
     const queryTensor = await embedder(message, { pooling: "mean", normalize: true });
     const queryEmbedding = Array.from(queryTensor.data);
 
-    // 2. Search across all knowledge sources
+    // 2. Search across knowledge sources
     const combinedData = [...resumeData, ...githubData, ...portfolioData];
-
     const ranked = combinedData
       .map((item) => ({
         text: item.text,
@@ -73,27 +72,28 @@ ${historyText}
 User: ${message}
 Assistant:`;
 
-    // 5. Call Ollama
+    // 5. Call Ollama (non-streaming)
     const response = await fetch("http://localhost:11434/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         model: "llama3",
         prompt,
-        stream: false,
+        stream: false, // ✅ full reply at once
       }),
     });
 
     const data = await response.json();
-    const reply = data.response;
+    const reply = data.response || "⚠️ No response from model";
 
-    // 6. Update memory (keep last 5 turns)
+    // 6. Update memory
     conversationHistory.push({ role: "user", text: message });
     conversationHistory.push({ role: "assistant", text: reply });
     if (conversationHistory.length > 10) {
       conversationHistory = conversationHistory.slice(-10); // keep last 5 exchanges
     }
 
+    // ✅ Send full reply back
     res.json({ reply });
   } catch (err) {
     console.error("❌ Error:", err);
@@ -101,7 +101,7 @@ Assistant:`;
   }
 });
 
-// ✅ Clear history endpoint (optional)
+// ✅ Clear history endpoint
 app.post("/clear", (req, res) => {
   conversationHistory = [];
   res.json({ message: "✅ Conversation history cleared" });
