@@ -91,16 +91,8 @@
   align-items: flex-end;
   margin: 6px 0;
 }
-
-/* Assistant (left aligned) */
-.chat-row.assistant {
-  justify-content: flex-start;
-}
-
-/* User (right aligned) */
-.chat-row.user {
-  justify-content: flex-end;
-}
+.chat-row.assistant { justify-content: flex-start; }
+.chat-row.user { justify-content: flex-end; }
 
 /* Avatars */
 .chat-avatar {
@@ -190,6 +182,7 @@
   opacity: 0.9;
 }
 
+/* Header */
 .chatbot-header {
   display: flex;
   justify-content: space-between;  /* ✅ Keeps title left, buttons right */
@@ -217,12 +210,12 @@
   font-weight: 500;
   transition: background 0.2s ease-in-out;
 }
-
 .clear-btn:hover,
 .toggle-btn:hover {
   background: rgba(255,255,255,0.2);
 }
 
+/* Wrapper */
 .chatbot-wrapper {
   position: fixed;
   bottom: 20px;
@@ -233,25 +226,26 @@
   z-index: 1000;
 }
 
+/* Intro tooltip */
 .intro-tooltip {
   position: absolute;
   bottom: 80px;
-  right: 0; 
-  min-width: 260px;          /* ✅ ensure horizontal shape */
-  max-width: 320px;          /* ✅ don’t let it stretch too far */
+  right: 0;
+  min-width: 260px;
+  max-width: 320px;
   padding: 10px 14px;
-  border-radius: 12px;       /* ✅ more rectangular */
+  border-radius: 12px;
   background: #B415FF;
   color: white;
   font-size: 14px;
   line-height: 1.4;
-  text-align: center;        /* ✅ center text */
+  text-align: center;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   pointer-events: none;
-  white-space: normal;       /* wrap naturally */
+  white-space: normal;
 }
 
 .intro-tooltip.show {
@@ -264,7 +258,7 @@
   content: "";
   position: absolute;
   bottom: -8px;
-  right: 30px;               /* ✅ adjust so arrow matches */
+  right: 30px;
   border-width: 8px;
   border-style: solid;
   border-color: #B415FF transparent transparent transparent;
@@ -273,4 +267,35 @@
 @keyframes popIn {
   0% { transform: translateX(-50%) scale(0.8); opacity: 0; }
   100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+/* ✅ Mobile view */
+@media (max-width: 600px) {
+  .chatbot-container {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+  }
+
+  .chatbot-input input {
+    font-size: 16px;   /* bigger input for thumbs */
+  }
+
+  .chatbot-bubble {
+    width: 56px;
+    height: 56px;
+  }
+
+  .intro-tooltip {
+    bottom: 70px;      /* adjust spacing */
+    right: 50%;        /* center on bubble */
+    transform: translateX(50%) translateY(10px);
+  }
+  .intro-tooltip::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
 }
