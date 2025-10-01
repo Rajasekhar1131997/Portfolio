@@ -84,7 +84,7 @@ function Chatbot() {
       {!isOpen && (
         <div className="chatbot-wrapper">
           <div className={`intro-tooltip ${showIntroBubble ? "show" : ""}`}>
-            👋 Hi! I’m Raja’s personal assistant.  
+            👋 Hi! I’m Raja’s personal assistant.
             How can I help you today?
           </div>
           <div className="chatbot-bubble" onClick={() => setIsOpen(true)}>
@@ -102,29 +102,41 @@ function Chatbot() {
               Clear
             </button>
             <button onClick={() => setIsOpen(false)} className="toggle-btn">
-              ✕
+              —
             </button>
           </div>
         </div>
 
         <div className="chatbot-messages">
           {messages.map((msg, idx) => (
-            <div
-              key={idx}
-              className={`chat-message ${msg.sender}`}
-              dangerouslySetInnerHTML={{ __html: msg.text }}
-            />
+            <div key={idx} className={`chat-row ${msg.sender}`}>
+              {msg.sender === "assistant" && (
+                <img src={botLogo} alt="Bot" className="chat-avatar" />
+              )}
+              <div
+                className={`chat-message ${msg.sender}`}
+                dangerouslySetInnerHTML={{ __html: msg.text }}
+              />
+              {msg.sender === "user" && (
+                <div className="chat-avatar user-avatar">👤</div>
+              )}
+            </div>
           ))}
 
           {isTyping && (
-            <div className="typing-bubble">
-              <div className="typing-dots">
-                <span></span><span></span><span></span>
+            <div className="chat-row assistant">
+              <img src={botLogo} alt="Bot" className="chat-avatar" />
+              <div className="typing-bubble">
+                <div className="typing-dots">
+                  <span></span><span></span><span></span>
+                </div>
               </div>
             </div>
           )}
+
           <div ref={messagesEndRef} />
         </div>
+
 
         <div className="chatbot-input">
           <input

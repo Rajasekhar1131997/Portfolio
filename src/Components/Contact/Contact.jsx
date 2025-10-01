@@ -55,12 +55,12 @@ const Contact = () => {
                     <div className="contact-details">
                         <div className="contact-detail">
                             <a href="mailto:rajakolagotla@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <img src={mail_icon} alt="Email" /> <p>rajakolagotla@gmail.com</p>
+                                <img src={mail_icon} alt="Email" /> <p>rajasekharrkolagotla@gmail.com</p>
                             </a>
                         </div>
                         <div className="contact-detail">
                             <a href="tel:+19162395267" target="_blank" rel="noopener noreferrer">
-                                <img src={call_icon} alt="Phone" /><p>+1 (916)-239-5267</p>
+                                <img src={call_icon} alt="Phone" /><p>+1 (916)-399-3684</p>
                             </a>
                         </div>
                         <div className="contact-detail">
