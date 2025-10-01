@@ -1,11 +1,39 @@
-# Portfolio
-Hi Everyone!! I am Rajasekhar Reddy Kolagotla, This is my Portfolio Website created using React + Vite JS. I hope you like it.
+# 🚀 Rajasekhar Reddy Kolagotla – Portfolio Website
 
-# React + Vite
+This repository contains the source code for my **personal portfolio website**, showcasing my experience, skills, and projects.  
+The site is designed to be fast, responsive, and engaging, with an **AI-powered personal assistant chatbot** that helps visitors explore my work more naturally.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🔥 Key Highlights
+- 🌐 Fully responsive design (desktop + mobile)
+- 🤖 AI-Powered Chatbot trained on my **resume, GitHub, and portfolio**
+- 🖼️ Projects showcase with descriptions and links
+- 📜 Resume integration for quick access
+- ⚡ Built for performance and modern web standards
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Vite, CSS3, Tailwind  
+- **Backend (Chatbot):** Node.js, Express.js  
+- **Database / Storage:** SQLite3 (testing), MongoDB (planned)  
+- **AI / NLP:** Hugging Face Transformers  
+- **Hosting:** Azure (portfolio), AWS (chatbot backend)  
+- **Version Control:** Git + GitHub  
+
+---
+## 🚀 Run Locally
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Rajasekhar1131997/Portfolio.git
+   cd Portfolio
+
+2. Install dependencies
+   ```bash
+   npm install
+   
+3. Start development server:
+   ```bash
+   npm run dev
+
