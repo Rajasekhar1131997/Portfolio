@@ -54,12 +54,12 @@ const Contact = () => {
                     <p>I'm currently looking for new opportunities, and my inbox is always open. Whether you have a question, opportunity, or just want to say hi, I'll get back to you!</p>
                     <div className="contact-details">
                         <div className="contact-detail">
-                            <a href="mailto:rajakolagotla@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <a href="mailto:rajasekharrkolagotla@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <img src={mail_icon} alt="Email" /> <p>rajasekharrkolagotla@gmail.com</p>
                             </a>
                         </div>
                         <div className="contact-detail">
-                            <a href="tel:+19162395267" target="_blank" rel="noopener noreferrer">
+                            <a href="tel:+19163993684" target="_blank" rel="noopener noreferrer">
                                 <img src={call_icon} alt="Phone" /><p>+1 (916)-399-3684</p>
                             </a>
                         </div>
