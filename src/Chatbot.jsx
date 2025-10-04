@@ -12,6 +12,9 @@ function Chatbot() {
   const [firstOpen, setFirstOpen] = useState(true); // ✅ to send greeting inside chat only once
   const messagesEndRef = useRef(null);
 
+  // ✅ Use backend URL from environment variable (works for local + AWS)
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
   // Auto-scroll
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -56,6 +59,7 @@ function Chatbot() {
     });
   };
 
+  // ✅ Updated to use dynamic backend URL
   const sendMessage = async () => {
     if (!input.trim()) return;
 
@@ -65,7 +69,7 @@ function Chatbot() {
     setIsTyping(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/chat", { message: input });
+      const res = await axios.post(`${BACKEND_URL}/chat`, { message: input });
       const reply = { sender: "assistant", text: formatMessage(res.data.reply) };
       setMessages((prev) => [...prev, reply]);
     } catch (err) {
@@ -136,7 +140,6 @@ function Chatbot() {
 
           <div ref={messagesEndRef} />
         </div>
-
 
         <div className="chatbot-input">
           <input
